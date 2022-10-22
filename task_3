@@ -1,0 +1,24 @@
+// Написать программу копирования массива.
+void FillArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    array[i] = new Random().Next(-10, 10);
+}
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    Console.Write($"{array[i]} ");
+}
+void CopyArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    array[i] = array[i];
+}
+int[] array = new int [4];
+FillArray(array);
+Console.WriteLine("Your array: ");
+PrintArray(array);
+Console.WriteLine();
+CopyArray(array);
+Console.WriteLine("Copy of your array: ");
+PrintArray(array);
