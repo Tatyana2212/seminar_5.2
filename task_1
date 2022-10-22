@@ -1,0 +1,22 @@
+// Найти точку пересечения двух прямых заданных уравнением y = k1 * x + b1, y = k2 * x + b2.
+Console.WriteLine("enter k1: ");
+float k1 = float.Parse(Console.ReadLine() ?? "0");
+Console.WriteLine("enter k2: ");
+float k2 = float.Parse(Console.ReadLine() ?? "0");
+Console.WriteLine("enter b1: ");
+float b1 = float.Parse(Console.ReadLine() ?? "0");
+Console.WriteLine("enter b2: ");
+float b2= float.Parse(Console.ReadLine() ?? "0");
+
+float x=(b2-b1)/(k1-k2);
+float y=(k1*(b2-b1))/(k1-k2)+b1;
+
+if (k1==k2 && b1==b2) 
+{
+  Console.WriteLine("the lines coincide");
+}
+
+else
+{
+Console.WriteLine($"the cross point of x and y: {x} {y}");
+}
